@@ -1,0 +1,13 @@
+$myFont: Arial, Helvetica, sans-serif;
+$myFontSize: 12px;
+$myBackgroundColor: #c3cfe2;
+
+body {
+    background-color: $myBackgroundColor;
+    font-family: $myFont;
+    font-size: $myFontSize;
+}
+
+@import './testimonial';
+@import './portfolio-grid';
+@import './social-media-buttons'

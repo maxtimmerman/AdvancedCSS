@@ -1,0 +1,59 @@
+.social-container {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    transition: width 1s;
+    justify-content:left;
+    z-index: 2;
+    position: fixed;
+    right: 0px;
+    img {
+        width: 25px;
+        display: inline-block;
+        padding: 10px;
+    }
+    button {
+        background-color: transparent;
+        color: $myBackgroundColor;
+        text-decoration: underline;
+        letter-spacing: 0.5px;
+        border-style: none;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+}
+
+.social-container:hover {
+    width: 250px;
+}
+
+.youtube {
+    background-color: red;
+    bottom: 280px;
+}
+
+.twitter {
+    background-color: #00aced;
+    bottom: 235px;
+}
+
+.linkedin {
+    background-color: #007bb6;
+    bottom: 190px;
+}
+
+.facebook {
+    background-color: #3b5998;
+    bottom: 145px;
+}
+
+.github {
+    background-color: #333;
+    bottom: 100px;
+}
+
+@media screen and (max-width: 600px) {
+    .social-container {
+        display: none;
+    }
+}

@@ -1,0 +1,79 @@
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    max-width: 1000px;
+    gap: 15px;
+}
+
+.container {
+    position:relative;
+    max-width: 270px;
+    display:block;
+    align-items:center;
+    justify-content: center;
+}
+
+  .container::before {
+    content: '';
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    border-radius: 10px;
+}
+
+  .container:hover::before {
+    opacity: 1;
+}
+
+  .container img {
+    position: relative;
+    display: grid;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+    border-radius: 10px;
+}
+  
+  .btn {
+    background-color: #000;
+    color: $myBackgroundColor;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: lowercase;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position:absolute;
+    top: 35%;
+    left: 35%;
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}
+
+  .container:hover .btn {
+    opacity: 1;
+}
+
+
+  @media screen and (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: auto auto;
+        max-width: 600px;
+    }
+}
+  @media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: auto;
+    }
+}
